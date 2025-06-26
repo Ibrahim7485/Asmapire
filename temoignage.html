@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Témoignages - Mode Élégante</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #e0e5ec;
+      color: #333;
+    }
+
+    /* Menu navigation */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #e0e5ec;
+      box-shadow: 8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #4a4e69;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 12px;
+      box-shadow: 5px 5px 10px #a3b1c6, -5px -5px 10px #ffffff;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
+    }
+
+    /* Témoignages Glassmorphisme */
+    .testimonials-section {
+      position: relative;
+      padding: 80px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-size: 300px;
+      background-attachment: fixed;
+      background-blend-mode: overlay;
+    }
+
+    .testimonials-title {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #4a4e69;
+      text-align: center;
+    }
+
+    .testimonial-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1200px;
+      z-index: 1;
+    }
+
+    .testimonial-card {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 25px;
+      color: #0f0f0f;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonial-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 600px) {
+      .testimonial-card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu -->
+  <header>
+    <div class="logo">Asmmpire collection</div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="menu1.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="temoignage.html">Témoignages</a>
+    </nav>
+  </header>
+
+  <!-- Section Témoignages -->
+  <section id="temoignages" class="testimonials-section">
+    <h2 class="testimonials-title">Ils nous font confiance</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <h3>Abdoulaye Diallo</h3>
+        <p>"Les vestes sont d'une qualité exceptionnelle. Livraison rapide à Conakry !"</p>
+      </div>
+      <div class="testimonial-card">
+        <h3>Fatoumata Camara</h3>
+        <p>"Enfin une boutique en ligne fiable en Guinée. J'adore vos chemises !"</p>
+      </div>
+      <div class="testimonial-card">
+        <h3>Mamadou Bah</h3>
+        <p>"Service client très réactif. Les souliers sont top, je recommande vivement."</p>
+      </div>
+      <div class="testimonial-card">
+        <h3>Aissatou Sylla</h3>
+        <p>"La qualité et le style sont au rendez-vous. Je reviendrai sans hésiter."</p>
+      </div>
+      <div class="testimonial-card">
+        <h3>Ibrahima Sory Condé</h3>
+        <p>"Site très bien conçu, les articles sont encore mieux en vrai. Bravo !"</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mode Élégante</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #e0e5ec;
+      --shadow-light: #ffffff;
+      --shadow-dark: #a3b1c6;
+
+      --primary: #4a4e69;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: #333;
+    }
+
+    header {
+      background: var(--bg-color);
+
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: var(--primary);
+
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+      transition: 0.3s ease;
+
+    }
+
+    nav a:hover {
+      box-shadow: inset 5px 5px 10px var(--shadow-dark),
+                  inset -5px -5px 10px var(--shadow-light);
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      color: var(--primary);
+
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .product-section {
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: var(--bg-color);
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 10px 10px 20px var(--shadow-dark),
+                  -10px -10px 20px var(--shadow-light);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      width: 100%;
+
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    /* Responsive Nav */
+    .menu-toggle {
+      display: none;
+
+      cursor: pointer;
+      font-size: 1.5em;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+
+        display: block;
+        color: var(--primary);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="logo"><img src="img/logo a.PNG" alt="" width="50px" height="30px" > Asmapire collection</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav">
+      <a href="index.html">Accueil</a>
+      <a href="menu1.html">Articles</a>
+      <a href="contact.html">Contact</a>
+      <a href="temoignage.html">Témoignages</a>
+    </nav>
+  </header>
+
+  <!-- Hero / Accueil -->
+  <section class="hero">
+    <h1>Découvrez notre nouvelle collection</h1>
+    <p>Vestes, chemises, souliers et bien plus. Élégance garantie.</p>
+  </section>
+
+
+  <!-- Produits -->
+  <section id="articles" class="product-section">
+    <div class="product-card">
+      <img src="img/P3.jpg" alt="Veste"width="50px" height="200px">
+      <h3>Veste Classique</h3>
+      <p>Confort et élégance au quotidien.</p>
+    </div>
+    <div class="product-card">
+      <img src="img/V1.jpg" alt="Chemise"width="50px" height="200px">
+      <h3>Chemise Blanche</h3>
+
+      <p>Indispensable pour toutes les occasions.</p>
+    </div>
+    <div class="product-card">
+      <img src="img/S1.jpg" alt="Souliers"width="50px" height="200px">
+      <h3>Souliers Cuir</h3>
+      <p>Finition haut de gamme et confort optimal.</p>
+    </div>
+  </section>
+
+  <!-- Section Contact et Témoignages à ajouter -->
+  <!-- Vous pouvez intégrer les codes précédents ici -->
+
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

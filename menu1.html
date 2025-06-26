@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asmapire collection</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url(img/logo a.PNG) no-repeat center center/cover;
+      min-height: 100vh;
+      backdrop-filter: blur(6px);
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: rgb(19, 18, 18);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 15px 0 5px;
+    }
+
+    .card p {
+      margin: 5px 0;
+    }
+
+    .btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      color: rgb(247, 239, 245);
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      border: 1 solid 1 px ;
+      background-color: rgb(2, 66, 13);
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .commande-section {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      margin: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .commande-section h2 {
+      margin-bottom: 15px;
+    }
+
+    .commande-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .commande-list li {
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h3>LES ARTICLES CHEZ ASMPIRE COLLECTION</h3>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="menu1.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="temoignage.html">Témoignages</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Article 1 -->
+    <div class="card">
+      <img src="img/V1.jpg" alt="vestes">
+      <h3>vestes</h3>
+      <p>Pointure: XL</p>
+      <p>Prix: 59.99€</p>
+      <button class="btn" onclick="ajouterCommande('Chaussure Sport - 42 - 59.99€')">Ajouter</button>
+    </div>
+
+    <!-- Article 2 -->
+    <div class="card">
+      <img src="img/V2.jpg" alt="Chaussure 2">
+      <h3>Veste classique</h3>
+      <p>Pointure: L</p>
+      <p>Prix: 69.99€</p>
+      <button class="btn" onclick="ajouterCommande('Basket Urbaine - 44 - 69.99€')">Ajouter</button>
+    </div>
+
+    <!-- Article 3 -->
+    <div class="card">
+      <img src="img/V1.jpg" alt="Chaussure 3">
+      <h3>Veste classique</h3>
+      <p>Pointure: XL</p>
+      <p>Prix: 49.99€</p>
+      <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+    </div>
+    <div class="card">
+        <img src="img/P1.jpg" alt="Chaussure 3">
+        <h3>Veste classique</h3>
+        <p>Pointure: XXL</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div>
+      <div class="card">
+        <img src="img/V7.jpg" alt="Chaussure 3">
+        <h3>Veste classique</h3>
+        <p>Pointure: XXL</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div><div class="card">
+        <img src="img/P3.jpg" alt="Chaussure 3">
+        <h3>Veste classique</h3>
+        <p>Pointure: XL</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div><div class="card">
+        <img src="img/V6.jpg" alt="Chaussure 3">
+        <h3>Veste classique</h3>
+        <p>Pointure: XXL</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div><div class="card">
+        <img src="img/P3.jpg" alt="Chaussure 3">
+        <h3>Veste classique</h3>
+        <p>Pointure: XL</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div>
+      <div class="card">
+        <img src="img/P1.jpg" alt="Chaussure 3">
+        <h3>Veste classique</h3>
+        <p>Pointure: 40</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div>
+      <div class="card">
+        <img src="img/S1.jpg" alt="Chaussure 3">
+        <h3>Chaussure Classique</h3>
+        <p>Pointure: 40</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div>
+      <div class="card">
+        <img src="img/S2.jpg" alt="Chaussure 3">
+        <h3>Chaussure Classique</h3>
+        <p>Pointure: 40</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div>
+      <div class="card">
+        <img src="img/S3.jpg" alt="Chaussure 3">
+        <h3>Chaussure Classique</h3>
+        <p>Pointure: 40</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div>
+      <div class="card">
+        <img src="img/S4.jpg" alt="Chaussure 3">
+        <h3>Chaussure Classique</h3>
+        <p>Pointure: 40</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div>
+      <div class="card">
+        <img src="img/S6.jpg" alt="Chaussure 3">
+        <h3>fleur</h3>
+        <p>Pointure: 40</p>
+        <p>Prix: 49.99€</p>
+        <button class="btn" onclick="ajouterCommande('Chaussure Classique - 40 - 49.99€')">Ajouter</button>
+      </div>
+  </main>
+
+  <section class="commande-section">
+    <h2>Commandes</h2>
+    <ul class="commande-list" id="commandeList">
+      <!-- Commandes ajoutées ici -->
+    </ul>
+  </section>
+
+  <script>
+    function ajouterCommande(item) {
+      const liste = document.getElementById('commandeList');
+      const element = document.createElement('li');
+      element.textContent = item;
+      liste.appendChild(element);
+    }
+  </script>
+</body>
+</html>
